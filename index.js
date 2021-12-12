@@ -44,10 +44,10 @@ function init() {
   //-----------------------------------------------------//
   //  3dオブジェクトを作成
   //-----------------------------------------------------//
-  new THREE.MTLLoader().setPath("/obj/").load("yadon.mtl", function (materials) {
+  new THREE.MTLLoader().setPath("obj/").load("yadon.mtl", function (materials) {
     materials.preload();
     new THREE.OBJLoader()
-      .setPath("/obj/")
+      .setPath("obj/")
       .setMaterials(materials)
       .load("yadon.obj", function (object) {
         objmodel = object.clone();
